@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/buttonResta"
+        android:id="@+id/buttonMinus"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#F78C00"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline14" />
 
     <Button
-        android:id="@+id/buttonMult"
+        android:id="@+id/button_multiplication"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#F78C00"
@@ -57,7 +57,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDiv" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonDivision" />
 
     <Button
         android:id="@+id/button0"
@@ -66,7 +66,7 @@
         android:text="0"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button."
+        app:layout_constraintEnd_toStartOf="@+id/buttonPunto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
@@ -226,7 +226,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
     <Button
-        android:id="@+id/button."
+        android:id="@+id/buttonPunto"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="."
@@ -237,7 +237,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
     <Button
-        android:id="@+id/buttonDiv"
+        android:id="@+id/buttonDivision"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#F78C00"
@@ -262,7 +262,7 @@
 
     <TextView
         android:layout_margin="16dp"
-        android:id="@+id/textView"
+        android:id="@+id/textViewResult"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
