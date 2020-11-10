@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/buttonIgual"
+        android:id="@+id/button_result"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#F78C00"
@@ -249,7 +249,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline12" />
 
     <Button
-        android:id="@+id/buttonBorrar"
+        android:id="@+id/button_clean"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#C26879"

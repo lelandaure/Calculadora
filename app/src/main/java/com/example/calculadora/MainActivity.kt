@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.calculadora.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private var num1: Double = 0.0
@@ -31,24 +32,40 @@ class MainActivity : AppCompatActivity() {
         binding.buttonMultiplication.setOnClickListener(){operationSelected(MULTIPLICATION)}
         binding.buttonDivision.setOnClickListener(){operationSelected(DIVISION)}
 
-        binding.buttonBorrar.setOnClickListener(){
+        //cleanButton
+        binding.buttonClean.setOnClickListener(){
+            num1 = 0.0
+            num2 = 0.0
             binding.textViewResult.text = "0"
+            operation = NO_OPERATION
         }
+        binding.buttonResult.setOnClickListener(){
+            var result = when(operation){
+                PLUS -> num1.plus(num2)
+                MINUS -> num1.minus(num2)
+                MULTIPLICATION -> num1.times(num2)
+                DIVISION -> num1.div(num2)
+                else -> 0.0
+            }
 
+            binding.textViewResult.text = result.toString()
+        }
     }
 
     private fun numberSelected(digito: String) {
-            textViewResult.text = "${textViewResult.text}$digito"
+        textViewResult.text = "${textViewResult.text}$digito"
+        if (operation != NO_OPERATION)
+            num2 = textViewResult.text.toString().toDouble()
+        else
+            num1 = textViewResult.text.toString().toDouble()
     }
     private fun operationSelected(operation: Int){
         this.operation = operation
-
-        num1 = textViewResult.text.toString().toDouble()
-
         textViewResult.text = "0"
     }
 
     companion object{
+        const val NO_OPERATION = 0
         const val PLUS = 1
         const val MINUS = 2
         const val MULTIPLICATION = 3
